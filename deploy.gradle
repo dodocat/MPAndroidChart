@@ -58,29 +58,29 @@ afterEvaluate { project ->
                 }
 
                 pom.project {
-                    name POM_NAME
-                    packaging POM_PACKAGING
-                    description hasProperty('POM_DESCRIPTION') ? POM_DESCRIPTION : ""
-                    url hasProperty('POM_URL') ? POM_URL : ""
+                    name = POM_NAME
+                    packaging = POM_PACKAGING
+                    description =  POM_DESCRIPTION
+                    url = POM_URL
 
                     scm {
-                        url hasProperty('POM_SCM_URL') ? POM_SCM_URL : ""
-                        connection hasProperty('POM_SCM_CONNECTION') ? POM_SCM_CONNECTION : ""
-                        developerConnection hasProperty('POM_SCM_DEV_CONNECTION') ? POM_SCM_DEV_CONNECTION : ""
+                        url = hasProperty('POM_SCM_URL') ? POM_SCM_URL : ""
+                        connection = hasProperty('POM_SCM_CONNECTION') ? POM_SCM_CONNECTION : ""
+                        developerConnection = hasProperty('POM_SCM_DEV_CONNECTION') ? POM_SCM_DEV_CONNECTION : ""
                     }
 
                     licenses {
                         license {
-                            name hasProperty('POM_LICENCE_NAME') ? POM_LICENCE_NAME : ""
-                            url  hasProperty('POM_LICENCE_URL') ? POM_LICENCE_URL : ""
-                            distribution hasProperty('POM_LICENCE_DIST') ? POM_LICENCE_DIST : ""
+                            name = hasProperty('POM_LICENCE_NAME') ? POM_LICENCE_NAME : ""
+                            url = hasProperty('POM_LICENCE_URL') ? POM_LICENCE_URL : ""
+                            distribution = hasProperty('POM_LICENCE_DIST') ? POM_LICENCE_DIST : ""
                         }
                     }
 
                     developers {
                         developer {
-                            id POM_DEVELOPER_ID
-                            name POM_DEVELOPER_NAME
+                            id = POM_DEVELOPER_ID
+                            name = POM_DEVELOPER_NAME
                         }
                     }
                 }
