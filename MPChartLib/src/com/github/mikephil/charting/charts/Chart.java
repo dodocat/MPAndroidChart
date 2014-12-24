@@ -1,6 +1,8 @@
 
 package com.github.mikephil.charting.charts;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.ContentValues;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -39,9 +41,6 @@ import com.github.mikephil.charting.utils.MarkerView;
 import com.github.mikephil.charting.utils.SelInfo;
 import com.github.mikephil.charting.utils.Utils;
 import com.github.mikephil.charting.utils.ValueFormatter;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.ValueAnimator;
-import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -49,6 +48,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+
+import static android.animation.ValueAnimator.AnimatorUpdateListener;
 
 /**
  * Baseclass of all Chart-Views.
