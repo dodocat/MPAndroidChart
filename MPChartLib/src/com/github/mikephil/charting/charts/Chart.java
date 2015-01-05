@@ -1,6 +1,8 @@
 
 package com.github.mikephil.charting.charts;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.ContentValues;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -39,9 +41,6 @@ import com.github.mikephil.charting.utils.MarkerView;
 import com.github.mikephil.charting.utils.SelInfo;
 import com.github.mikephil.charting.utils.Utils;
 import com.github.mikephil.charting.utils.ValueFormatter;
-import com.nineoldandroids.animation.ObjectAnimator;
-import com.nineoldandroids.animation.ValueAnimator;
-import com.nineoldandroids.animation.ValueAnimator.AnimatorUpdateListener;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -49,6 +48,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+
+import static android.animation.ValueAnimator.AnimatorUpdateListener;
 
 /**
  * Baseclass of all Chart-Views.
@@ -1441,18 +1442,18 @@ public abstract class Chart<T extends ChartData<? extends DataSet<? extends Entr
     }
 
     /**
-     * sets the size of the description text in pixels, min 7f, max 14f
+     * sets the size of the description text in pixels, min 6f, max 16f
      * 
      * @param size
      */
     public void setDescriptionTextSize(float size) {
 
-        if (size > 14f)
-            size = 14f;
-        if (size < 7f)
-            size = 7f;
+        if (size > 16f)
+            size = 16f;
+        if (size < 6f)
+            size = 6f;
 
-        mInfoPaint.setTextSize(Utils.convertDpToPixel(size));
+        mDescPaint.setTextSize(Utils.convertDpToPixel(size));
     }
 
     /**
