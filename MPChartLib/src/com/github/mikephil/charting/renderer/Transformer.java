@@ -474,10 +474,7 @@ public class Transformer {
      */
     public void setScaleMinima(float scaleXmin, float scaleYmin, ChartInterface chart) {
 
-        if (scaleXmin < 1f)
-            scaleXmin = 1f;
-        if (scaleYmin < 1f)
-            scaleYmin = 1f;
+
 
         mMinScaleX = scaleXmin;
         mMinScaleY = scaleYmin;
