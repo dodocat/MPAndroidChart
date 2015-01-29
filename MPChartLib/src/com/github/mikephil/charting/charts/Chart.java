@@ -2194,6 +2194,11 @@ public abstract class Chart<T extends ChartData<? extends DataSet<? extends Entr
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 
+        if (w <=0 || h <= 0) {
+            super.onSizeChanged(w, h, oldw, oldh);
+            return;
+        }
+
         // create a new bitmap with the new dimensions
         mDrawBitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_4444);
         mDrawCanvas = new Canvas(mDrawBitmap);
